@@ -4,7 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 def test_form_interaction():
-    driver = webdriver.Chrome()
+    driver = webdriver.Edge()
     driver.maximize_window()
     driver.get ("https://bonigarcia.dev/selenium-webdriver-java/data-types.html")
 
@@ -56,6 +56,13 @@ def test_form_interaction():
     zip_code_field = wait.until(EC.presence_of_element_located((By.ID, "zip-code")))
 
     assert "danger" in driver.find_element(By.ID , "zip-code").get_attribute("class")
+
+    fields_to_check = [
+            "first-name", "last-name", "address", "e-mail", 
+            "phone", "city", "country", "job-position", "company"
+        ]
+        
+       
 
     
 
