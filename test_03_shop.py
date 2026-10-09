@@ -7,7 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 
 def test_sauce_demo_store():
-    driver = webdriver.Chrome()
+    driver = webdriver.Firefox()
     wait = WebDriverWait(driver, 5)
     
     try:
